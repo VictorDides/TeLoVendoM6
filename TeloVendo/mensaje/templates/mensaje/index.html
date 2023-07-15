@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pagina Principal</h1>
+    {% for publicacion in publicaciones%}
+        <h2> {{publicacion.titulo}} </h2>
+        <h3> {{publicacion.fecha}} </h3>
+        <p> {{publicacion.autormanage}} </p>
+    {% endfor %}
+</body>
+</html>
