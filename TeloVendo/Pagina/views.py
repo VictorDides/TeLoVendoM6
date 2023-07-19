@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import TweetForm
+from .models import Publicacion
 
 clientes = [
     {
@@ -48,3 +50,6 @@ def landing(request):
     }
     return render(request,'Pagina/landing.html', contenido)
 
+def createTweet(request):
+    form = TweetForm()
+    return render(request,"Pagina/tweet_create.html",{'form':form})
