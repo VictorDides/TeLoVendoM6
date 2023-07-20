@@ -1,7 +1,8 @@
 {% extends "Pagina/base.html" %}
 {% block contenido %}
-<form method="post">
+<form method="POST">
+    {% csrf_token %} <!--esto es por seguridad y prevenir vulnerabilidades (estandar)-->
     {{form.as_p}}
-    <a href="#" type="Submit">Ingresar</a>
+    <button type="submit">Ingresar</button>
 </form>
 {% endblock %}

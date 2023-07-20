@@ -51,5 +51,11 @@ def landing(request):
     return render(request,'Pagina/landing.html', contenido)
 
 def createTweet(request):
-    form = TweetForm()
-    return render(request,"Pagina/tweet_create.html",{'form':form})
+    if request.method == "POST":
+        formulario_post = TweetForm(request.POST)
+        if formulario_post.is_valid():
+            tweet = formulario_post.save(commit=False)
+            tweet.save()
+    formulario_get = TweetForm()
+    return render(request,"Pagina/tweet_create.html",{'form':formulario_get})
+    

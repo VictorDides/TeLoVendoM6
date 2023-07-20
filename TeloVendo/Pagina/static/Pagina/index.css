@@ -1,18 +1,92 @@
-/* Estilos para el cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d963bd;
-    margin-left: 200px;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  
+}
+.contenido {
+  margin-left: 20px;
 }
 
-  /* Estilos para los encabezados */
-h1 {
-    color: #034828;
-    font-size: 24px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0;
 }
 
-  /* Estilos para los enlaces */
+p {
+  margin-bottom: 10px;
+}
+
 a {
-    color: #007bff;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .main {
+    margin-top: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .button {
+    padding: 5px;
+  }
 }
