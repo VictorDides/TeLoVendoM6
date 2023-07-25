@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'pagina_bienvenida'
+LOGIN_URL = 'login'
 
 # Application definition
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mensaje.apps.MensajeConfig',
     'Pagina.apps.PaginaConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +115,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
 
 
 # Static files (CSS, JavaScript, Images)

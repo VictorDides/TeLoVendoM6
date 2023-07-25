@@ -1,5 +1,14 @@
 {% extends "Pagina/base.html" %}
 {% block contenido %}
+<div>
+{% if messages %}
+    {% for mensaje in messages%}
+        <div class="alert alert-success" role="alert">
+        {{mensaje}}
+        </div>
+    {% endfor %}
+{% endif %}
+</div>
 <h1>Pagina Principal</h1>
 {% for cliente in clientes%}
     <h2> {{cliente.nombre}} </h2>
